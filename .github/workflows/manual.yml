@@ -7,15 +7,21 @@ on:
         type: choice
         description: Who to greet
         options: 
-        - monalisa
+        - Arun
         - cschleiden
+        required: false
       message:
+        description: A formal string
+        type: string
         required: true
       use-emoji:
+        required: false
         type: boolean
         description: Include 🎉🤣 emojis
       environment:
         type: environment
+        required: false
+        description: Just an environment
 
 jobs:
   greet:

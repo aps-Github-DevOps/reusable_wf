@@ -7,6 +7,7 @@ on:
         required: true
         type: string
       tag: 
+        required: false
         type: string
     secrets:
       registry_username:
