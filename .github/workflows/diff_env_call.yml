@@ -20,13 +20,13 @@ on:
         type: string
 
 jobs:
-  
+
   Print_Job:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     env:
-      ENV_USERNAME: ${{ secrets.ENV_USERNAME }}
-      ENV_PASS: ${{ secrets.ENV_PASS }}
+      ENV_USERNAME: ${{ inputs.ENV_USERNAME }}
+      ENV_PASS: ${{ inputs.ENV_PASS }}
 
     steps:
       - name: Checks-out
