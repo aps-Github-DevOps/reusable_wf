@@ -2,22 +2,21 @@ name: WorkflowCall Different_Env
 
 on: 
   workflow_call:
+
     inputs:
       environment:
         description: 'Name of the environment'
         required: true
         default: 'dev'
         type: string
-      
+    
+    secrets:
       ENV_USERNAME:
         description: 'Username'
         required: true
-        type: string
-
       ENV_PASS:
         description: 'Password'
         required: true
-        type: string
 
 jobs:
 
