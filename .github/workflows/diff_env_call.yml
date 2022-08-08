@@ -7,7 +7,7 @@ on:
       environment:
         description: 'Name of the environment'
         required: true
-        default: 'dev'
+        default: 'dev2'
         type: string
     
     secrets:
