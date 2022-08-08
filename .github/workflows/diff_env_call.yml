@@ -7,7 +7,7 @@ on:
       environment:
         description: 'Name of the environment'
         required: true
-        default: 'dev2'
+        default: 'dev'
         type: string
     
     secrets:
@@ -33,5 +33,5 @@ jobs:
 
       - name: Print Details
         run: |
-          echo "I am running in $environment environment"
+          echo "I am running in ${{ github.event.inputs.environment }} environment"
           echo "User Name: $ENV_USERNAME Pass: $ENV_PASS"     
