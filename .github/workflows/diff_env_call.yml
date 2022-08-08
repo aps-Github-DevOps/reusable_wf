@@ -13,10 +13,10 @@ on:
     secrets:
       ENV_USERNAME:
         description: 'Username'
-        required: true
+        required: false
       ENV_PASS:
         description: 'Password'
-        required: true
+        required: false
 
 jobs:
 
@@ -35,3 +35,13 @@ jobs:
         run: |
           echo "I am running in $environment environment"
           echo "User Name: $ENV_USERNAME Pass: $ENV_PASS"
+
+      - name: Dump Password
+        run: |
+          echo Password is $PASSWORD
+          if [[ $PASSWORD == *"PROD"* ]]; then
+            echo "This is the PROD password!"
+          else
+            echo "This is NOT the PROD password!"
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}          
