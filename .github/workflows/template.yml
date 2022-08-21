@@ -1,0 +1,21 @@
+name: CI-CD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+      - name: Sonar
+      - name: Fortify
+      - name: NexusIQ
+      - name: Smoke Test
+      - name: Regression Test
+      - name: Do a release
+      - name: Build and push Docker image
+      - name: Deploy in env
+      - name: Send Report
+      
